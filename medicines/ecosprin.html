@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecosprin 75mg Product Page</title>
+    <link rel="stylesheet" href="./ecosprin.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">one medical</div>
+      <nav>
+        <ul>
+          <li><a href="#">Medicine</a></li>
+          <li><a href="#">Lab Tests</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="#">Health Blogs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="images">
+        <img
+          id="mainImage"
+          class="main-image"
+          src="../images/ecosprin/img1.png"
+          alt="Ecosprin"
+        />
+        <div class="thumbnails">
+          <img
+            class="thumbnail"
+            src="../images/ecosprin/img1.png"
+            onclick="changeImage(this)"
+          />
+          <img
+            class="thumbnail"
+            src="../images/ecosprin/img2.png"
+            onclick="changeImage(this)"
+          />
+          <img
+            class="thumbnail"
+            src="../images/ecosprin/img3.png"
+            onclick="changeImage(this)"
+          />
+          <img
+            class="thumbnail"
+            src="../images/ecosprin/img4.png"
+            onclick="changeImage(this)"
+          />
+        </div>
+      </div>
+      <div class="details">
+        <div class="title">Ecosprin 75mg Strip Of 14 Tablets</div>
+        <div class="price">
+          ₹4.17
+          <span style="text-decoration: line-through; color: #888">₹5.49</span>
+          (24% OFF)
+        </div>
+        <div class="description">
+          Ecosprin 75 tablet is a medication that helps prevent heart attacks,
+          strokes, and angina. It is also used in patients who have had
+          angioplasty. The active ingredient is low-dose aspirin. Aspirin slows
+          down blood clotting by preventing platelets from sticking to each
+          other.
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+      </div>
+    </div>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td>Offer Price</td>
+            <td>₹4.17</td>
+          </tr>
+          <tr>
+            <td>You Save</td>
+            <td>₹1.32 (24% on MRP</td>
+          </tr>
+          <tr>
+            <td>Contains</td>
+            <td>Aspirin,Acetyl Salicyliv Acid(75.0 Mg)</tr>
+          </tr>
+          <tr>
+            <td>Uses</td>
+            <td>Prevention of heart attack, stroke, angina</td>
+          </tr>
+           <tr>
+            <td>Side effects</td>
+            <td>Indigestion, nausea, diarrhoea, vomiting</td>
+          </tr>
+          <tr>
+            <td>Therapy</td>
+            <td>ANTI-PLATELET</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function changeImage(element) {
+        const mainImage = document.getElementById("mainImage");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        mainImage.src = element.src.replace("60.png", "300x200.png");
+        thumbnails.forEach((img) => img.classList.remove("active"));
+        element.classList.add("active");
+      }
+    </script>
+  </body>
+</html>

@@ -1,4 +1,3 @@
-/* Reset and base styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -48,6 +46,12 @@ nav a {
 nav a:hover {
   color: #007e63;
 }
+nav a.active {
+  background-color: #d0f0e0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  color: #004d3c;
+}
 
 .signup {
   background-color: #004d3c;
@@ -72,7 +76,7 @@ nav a:hover {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: auto;
-  gap: 4rem; /* creates distance between text and image */
+  gap: 4rem; 
   flex-wrap: wrap;
 }
 
@@ -92,7 +96,7 @@ nav a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* Buttons */
+
 .buttons {
   display: flex;
   gap: 1rem;
@@ -140,7 +144,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero image */
+
 .hero-image {
   flex: 1 1 45%;
   display: flex;
@@ -178,4 +182,53 @@ nav a:hover {
   .buttons {
     justify-content: center;
   }
+}
+.product-section {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.product-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-section p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  width: 150px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #333;
 }
